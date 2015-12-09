@@ -6,9 +6,8 @@ var arr = [10,20,30];
 
   //Code Here
 var first = function(arr) {
-  return shift.arr();
+  return arr[0];
 }
-
 //Next problem
 
 
@@ -18,7 +17,9 @@ var arr = [40,50,60];
 
 
   //Code Here
-
+  var last = function(arr) {
+    return arr[2]
+  }
 
 //Next Problem
 
@@ -27,7 +28,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
-
+var looper = function(family) {
+  for (var i = 0; i < family.length; i++) {
+    alert("Hello " + family[i]);
+  }
+}
+looper(family);
 
 //Next problem
 
@@ -37,7 +43,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-
+var reversedLooper = function() {
+  for (var i = 0; i >= letters.length - 1; i--) {
+    alert(letters[i]);
+  }
+}
 
 //Next Problem
 
@@ -242,7 +252,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
-
+var users = [];
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -255,6 +265,10 @@ var user1 = {
 };
 
 //Your Code Here
+users.push(user1);
+users.push(user1);
+users.push(user1);
+
 
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
@@ -265,5 +279,10 @@ objects until you find Tyler's account (use tylermcginnis33@gmail.com to find hi
 Once you find the particular index he's located in, delete him from the array.*/
 
   //Code Here
-
+for (var i = 0; i < users.length; i++) {
+  if (users[i].email === "tylermcginnis33@gmail.com") {
+    users.splice(i, 1);
+    i = users.length;
+  }
+}
 //The activity we just did is very much how data works in 'the real world'.
